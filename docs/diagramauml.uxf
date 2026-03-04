@@ -1,5 +1,5 @@
-<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1300</x><y>247</y><w>377</w><h>351</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
-cinemax::Pelicula
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>816</x><y>88</y><w>232</w><h>216</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Pelicula
 --
 - titulo: String
 - genero: String
@@ -15,7 +15,7 @@ cinemax::Pelicula
 --
 Responsibilities
 -- Representar una película del catálogo
--- Exponer datos base comunes a todos los tipos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1872</x><y>156</y><w>338</w><h>195</h></coordinates><panel_attributes>cinemax::Largometraje
+-- Exponer datos base comunes a todos los tipos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1168</x><y>32</y><w>208</w><h>120</h></coordinates><panel_attributes>Largometraje
 --
 - director: String
 - actoresPrincipales: List&lt;String&gt;
@@ -25,7 +25,7 @@ Responsibilities
 --
 Responsibilities
 -- Película tipo largometraje
--- Guardar director y actores principales</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1976</x><y>416</y><w>273</w><h>195</h></coordinates><panel_attributes>cinemax::Documental
+-- Guardar director y actores principales</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1168</x><y>192</y><w>168</w><h>120</h></coordinates><panel_attributes>Documental
 --
 - tematica: String
 - narrador: String
@@ -35,7 +35,7 @@ Responsibilities
 --
 Responsibilities
 -- Película tipo documental
--- Guardar temática y narrador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>78</x><y>1365</y><w>273</w><h>221</h></coordinates><panel_attributes>cinemax::Cine
+-- Guardar temática y narrador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>712</y><w>168</w><h>136</h></coordinates><panel_attributes>Cine
 --
 - nombre: String
 - direccion: String
@@ -46,7 +46,7 @@ Responsibilities
 --
 Responsibilities
 -- Representar un cine físico
--- Contener salas asociadas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>585</x><y>1365</y><w>325</w><h>247</h></coordinates><panel_attributes>cinemax::Sala
+-- Contener salas asociadas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>712</y><w>200</w><h>152</h></coordinates><panel_attributes>Sala
 --
 - numeroSala: int
 - capacidadAsientos: int
@@ -59,19 +59,7 @@ Responsibilities
 --
 Responsibilities
 -- Representar una sala dentro de un cine
--- Agrupar asientos y tecnología</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>1352</y><w>299</w><h>247</h></coordinates><panel_attributes>cinemax::Asiento
---
-- numeroAsiento: int
-- numeroFila: int
-- tipo: String
---
-+ getNumeroAsiento(): int
-+ getNumeroFila(): int
-+ getTipo(): TipoAsiento
---
-Responsibilities
--- Representar un asiento específico
--- Identificar fila, número y tipo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>845</y><w>338</w><h>273</h></coordinates><panel_attributes>cinemax::Funcion
+-- Agrupar asientos y tecnología</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>456</y><w>208</w><h>168</h></coordinates><panel_attributes>Funcion
 --
 - fechaHora: DateTime
 - pelicula: Pelicula
@@ -85,7 +73,7 @@ Responsibilities
 --
 Responsibilities
 -- Representar una proyección programada
--- Consultar disponibilidad de asientos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>858</y><w>273</w><h>247</h></coordinates><panel_attributes>cinemax::Cliente
+-- Consultar disponibilidad de asientos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>464</y><w>168</w><h>152</h></coordinates><panel_attributes>Cliente
 --
 - idCliente: String
 - correo: String
@@ -101,7 +89,7 @@ Responsibilities
 --
 Responsibilities
 -- Usuario que compra boletas
--- Mantener historial y lealtad</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>52</x><y>1833</y><w>377</w><h>273</h></coordinates><panel_attributes>cinemax::Empleado
+-- Mantener historial y lealtad</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>960</y><w>232</w><h>168</h></coordinates><panel_attributes>Empleado
 --
 - correo: String
 - contrasena: String
@@ -115,7 +103,7 @@ Responsibilities
 --
 Responsibilities
 -- Usuario que administra el sistema
--- Configurar horarios, funciones, películas y salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>611</x><y>819</y><w>351</w><h>312</h></coordinates><panel_attributes>cinemax::Compra
+-- Configurar horarios, funciones, películas y salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>440</y><w>216</w><h>192</h></coordinates><panel_attributes>Compra
 --
 - monto: double
 - fechaTransaccion: DateTime
@@ -131,27 +119,27 @@ Responsibilities
 --
 Responsibilities
 -- Registrar una compra/pago de boletas
--- Guardar monto, fecha y sillas compradas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>598</x><y>416</y><w>390</w><h>143</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
-cinemax::MedioPago
+-- Guardar monto, fecha y sillas compradas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>192</y><w>240</w><h>88</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+MedioPago
 --
 --
 + getTipo(): String
 --
 Responsibilities
--- Abstraer el medio de pago usado en una compra</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>0</y><w>273</w><h>117</h></coordinates><panel_attributes>cinemax::TarjetaCredito
+-- Abstraer el medio de pago usado en una compra</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>272</x><y>0</y><w>168</w><h>72</h></coordinates><panel_attributes>TarjetaCredito
 --
 --
 + getTipo(): String
 --
 Responsibilities
--- Medio de pago: tarjeta de crédito</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>897</x><y>0</y><w>273</w><h>117</h></coordinates><panel_attributes>cinemax::TarjetaDebito
+-- Medio de pago: tarjeta de crédito</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>568</x><y>0</y><w>168</w><h>72</h></coordinates><panel_attributes>TarjetaDebito
 --
 --
 + getTipo(): String
 --
 Responsibilities
 -- Medio de pago: tarjeta débito
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>403</y><w>325</w><h>234</h></coordinates><panel_attributes>cinemax::CuentaLealtad
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>184</y><w>200</w><h>144</h></coordinates><panel_attributes>CuentaLealtad
 --
 - puntos: int
 - nivel: String
@@ -163,16 +151,13 @@ Responsibilities
 --
 Responsibilities
 -- Registrar puntos de lealtad del cliente
--- Controlar nivel de membresía</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1456</x><y>585</y><w>78</w><h>286</h></coordinates><panel_attributes>lt=-
+-- Controlar nivel de membresía</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>912</x><y>296</y><w>48</w><h>176</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-tiene </panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>338</x><y>1469</y><w>273</w><h>65</h></coordinates><panel_attributes>lt=-
+tiene </panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>776</y><w>240</w><h>40</h></coordinates><panel_attributes>lt=-
 m1=1 
 m2=1..n
-contiene -&gt;</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>897</x><y>1456</y><w>429</w><h>65</h></coordinates><panel_attributes>lt=-
-m1=1
-m2=1..n
-tiene -&gt;</panel_attributes><additional_attributes>10;20;310;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1976</x><y>663</y><w>273</w><h>156</h></coordinates><panel_attributes>cinemax::PeliculaAnimada
+contiene -&gt;</panel_attributes><additional_attributes>10;20;280;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1168</x><y>360</y><w>168</w><h>96</h></coordinates><panel_attributes>PeliculaAnimada
 --
 - tecnicaAnimacion: String
 --
@@ -180,21 +165,35 @@ tiene -&gt;</panel_attributes><additional_attributes>10;20;310;20</additional_at
 --
 Responsibilities
 -- Película tipo animada
--- Guardar técnica de animación</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>962</y><w>377</w><h>65</h></coordinates><panel_attributes>lt=-
+-- Guardar técnica de animación</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>528</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-hace -&gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>949</x><y>962</y><w>377</w><h>65</h></coordinates><panel_attributes>lt=-
+hace -&gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>528</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-para -&gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>949</x><y>1118</y><w>377</w><h>299</h></coordinates><panel_attributes>lt=-
+para -&gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>624</y><w>272</w><h>120</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1..n
-tiene -&gt;</panel_attributes><additional_attributes>10;10;270;210</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>624</y><w>91</w><h>260</h></coordinates><panel_attributes>lt=-
+tiene -&gt;</panel_attributes><additional_attributes>10;10;320;130</additional_attributes></element><element><id>Relation</id><coordinates><x>96</x><y>320</y><w>56</w><h>160</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-tiene &gt;</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1664</x><y>247</y><w>234</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1664</x><y>481</y><w>338</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>240;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1664</x><y>572</y><w>338</w><h>195</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>240;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>546</y><w>52</w><h>299</h></coordinates><panel_attributes>lt=-
+tiene &gt;</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>88</y><w>144</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>232</y><w>144</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>288</y><w>144</w><h>136</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>272</y><w>32</w><h>184</h></coordinates><panel_attributes>lt=-
 m1=1
-m2=1</panel_attributes><additional_attributes>10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>195</x><y>1573</y><w>91</w><h>286</h></coordinates><panel_attributes>lt=-
+m2=1</panel_attributes><additional_attributes>10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>88</x><y>840</y><w>56</w><h>136</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1..n
-tiene -&gt;</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>533</x><y>104</y><w>156</w><h>338</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;100;240</additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>104</y><w>156</w><h>338</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;240</additional_attributes></element></diagram>
+tiene -&gt;</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>344</x><y>64</y><w>96</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;100;160</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>64</y><w>96</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>856</x><y>712</y><w>184</w><h>152</h></coordinates><panel_attributes>Asiento
+--
+- numeroAsiento: int
+- numeroFila: int
+- tipo: String
+--
++ getNumeroAsiento(): int
++ getNumeroFila(): int
++ getTipo(): TipoAsiento
+--
+Responsibilities
+-- Representar un asiento específico
+-- Identificar fila, número y tipo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>592</x><y>784</y><w>280</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..n</panel_attributes><additional_attributes>10;10;330;10</additional_attributes></element></diagram>
