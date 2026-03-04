@@ -13,7 +13,7 @@ Pelicula
 + getClasificacionEdad(): String
 + getFechaEstreno(): Date
 --
-Responsibilities
+Propósito(s)
 -- Representar una película del catálogo
 -- Exponer datos base comunes a todos los tipos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1168</x><y>32</y><w>208</w><h>120</h></coordinates><panel_attributes>Largometraje
 --
@@ -23,7 +23,7 @@ Responsibilities
 + getDirector(): String
 + getActoresPrincipales(): List&lt;String&gt;
 --
-Responsibilities
+Propósito(s)
 -- Película tipo largometraje
 -- Guardar director y actores principales</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1168</x><y>192</y><w>168</w><h>120</h></coordinates><panel_attributes>Documental
 --
@@ -33,7 +33,7 @@ Responsibilities
 + getTematica(): String
 + getNarrador(): String
 --
-Responsibilities
+Propósito(s)
 -- Película tipo documental
 -- Guardar temática y narrador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>712</y><w>168</w><h>136</h></coordinates><panel_attributes>Cine
 --
@@ -44,7 +44,7 @@ Responsibilities
 + getDireccion(): String
 + getSalas(): List&lt;Sala&gt;
 --
-Responsibilities
+Propósito(s)
 -- Representar un cine físico
 -- Contener salas asociadas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>712</y><w>200</w><h>152</h></coordinates><panel_attributes>Sala
 --
@@ -57,7 +57,7 @@ Responsibilities
 + getTecnologia(): String
 + getAsientos(): List&lt;Asiento&gt;
 --
-Responsibilities
+Propósito(s)
 -- Representar una sala dentro de un cine
 -- Agrupar asientos y tecnología</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>456</y><w>208</w><h>168</h></coordinates><panel_attributes>Funcion
 --
@@ -71,9 +71,9 @@ Responsibilities
 + getAsientosDisponibles(): List&lt;Asiento&gt;
 + estaDisponible(a: Asiento): boolean
 --
-Responsibilities
+Propósito(s)
 -- Representar una proyección programada
--- Consultar disponibilidad de asientos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>464</y><w>168</w><h>152</h></coordinates><panel_attributes>Cliente
+-- Consultar disponibilidad de asientos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>464</y><w>200</w><h>192</h></coordinates><panel_attributes>Cliente
 --
 - idCliente: String
 - correo: String
@@ -87,7 +87,7 @@ Responsibilities
 + getHistorialCompras(): List&lt;Compra&gt;
 + getCuentaLealtad(): CuentaLealtad
 --
-Responsibilities
+Propósito(s)
 -- Usuario que compra boletas
 -- Mantener historial y lealtad</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>960</y><w>232</w><h>168</h></coordinates><panel_attributes>Empleado
 --
@@ -101,7 +101,7 @@ Responsibilities
 + gestionarPeliculas(): void
 + gestionarSalas(): void
 --
-Responsibilities
+Propósito(s)
 -- Usuario que administra el sistema
 -- Configurar horarios, funciones, películas y salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>440</y><w>216</w><h>192</h></coordinates><panel_attributes>Compra
 --
@@ -117,7 +117,7 @@ Responsibilities
 + getFuncion(): Funcion
 + getMedioPago(): MedioPago
 --
-Responsibilities
+Pro´posito(s)
 -- Registrar una compra/pago de boletas
 -- Guardar monto, fecha y sillas compradas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>192</y><w>240</w><h>88</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 MedioPago
@@ -125,19 +125,19 @@ MedioPago
 --
 + getTipo(): String
 --
-Responsibilities
--- Abstraer el medio de pago usado en una compra</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>272</x><y>0</y><w>168</w><h>72</h></coordinates><panel_attributes>TarjetaCredito
+Propósito(s)
+-- Conseguir el medio de pago usado en una compra</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>272</x><y>0</y><w>168</w><h>72</h></coordinates><panel_attributes>TarjetaCredito
 --
 --
 + getTipo(): String
 --
-Responsibilities
+Propósito(s)
 -- Medio de pago: tarjeta de crédito</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>568</x><y>0</y><w>168</w><h>72</h></coordinates><panel_attributes>TarjetaDebito
 --
 --
 + getTipo(): String
 --
-Responsibilities
+Propósito(s)
 -- Medio de pago: tarjeta débito
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>184</y><w>200</w><h>144</h></coordinates><panel_attributes>CuentaLealtad
 --
@@ -149,7 +149,7 @@ Responsibilities
 + acumularPuntos(p: int): void
 + actualizarNivel(): void
 --
-Responsibilities
+Propósito(s)
 -- Registrar puntos de lealtad del cliente
 -- Controlar nivel de membresía</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>912</x><y>296</y><w>48</w><h>176</h></coordinates><panel_attributes>lt=-
 m1=1
@@ -163,12 +163,12 @@ contiene -&gt;</panel_attributes><additional_attributes>10;20;280;20</additional
 --
 + getTecnicaAnimacion(): String
 --
-Responsibilities
+Propósito(s)
 -- Película tipo animada
--- Guardar técnica de animación</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>528</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=-
+-- Guardar técnica de animación</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>528</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-hace -&gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>528</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=-
+hace -&gt;</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>528</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
 para -&gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>624</y><w>272</w><h>120</h></coordinates><panel_attributes>lt=-
@@ -192,7 +192,7 @@ tiene -&gt;</panel_attributes><additional_attributes>10;10;10;150</additional_at
 + getNumeroFila(): int
 + getTipo(): TipoAsiento
 --
-Responsibilities
+Propósito(s)
 -- Representar un asiento específico
 -- Identificar fila, número y tipo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>592</x><y>784</y><w>280</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
