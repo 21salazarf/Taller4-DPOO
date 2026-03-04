@@ -1,0 +1,180 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>105</x><y>21</y><w>203</w><h>189</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+cinemax::Pelicula
+--
+- titulo: String
+- genero: String
+- duracionMin: int
+- clasificacionEdad: String
+- fechaEstreno: Date
+--
++ getTitulo(): String
++ getGenero(): String
++ getDuracionMin(): int
++ getClasificacionEdad(): String
++ getFechaEstreno(): Date
+--
+Responsibilities
+-- Representar una película del catálogo
+-- Exponer datos base comunes a todos los tipos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>28</y><w>182</w><h>105</h></coordinates><panel_attributes>cinemax::Largometraje
+--
+- director: String
+- actoresPrincipales: List&lt;String&gt;
+--
++ getDirector(): String
++ getActoresPrincipales(): List&lt;String&gt;
+--
+Responsibilities
+-- Película tipo largometraje
+-- Guardar director y actores principales</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>168</y><w>147</w><h>105</h></coordinates><panel_attributes>cinemax::Documental
+--
+- tematica: String
+- narrador: String
+--
++ getTematica(): String
++ getNarrador(): String
+--
+Responsibilities
+-- Película tipo documental
+-- Guardar temática y narrador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>504</y><w>147</w><h>91</h></coordinates><panel_attributes>cinemax::PeliculaAnimada
+--
+- tecnicaAnimacion: String
+--
++ getTecnicaAnimacion(): String
+--
+Responsibilities
+-- Película tipo animada
+-- Guardar técnica de animación</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>336</y><w>147</w><h>119</h></coordinates><panel_attributes>cinemax::Cine
+--
+- nombre: String
+- direccion: String
+--
++ getNombre(): String
++ getDireccion(): String
++ getSalas(): List&lt;Sala&gt;
+--
+Responsibilities
+-- Representar un cine físico
+-- Contener salas asociadas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>784</x><y>336</y><w>175</w><h>133</h></coordinates><panel_attributes>cinemax::Sala
+--
+- numeroSala: int
+- capacidadAsientos: int
+- tecnologia: String
+--
++ getNumeroSala(): int
++ getCapacidadAsientos(): int
++ getTecnologia(): String
++ getAsientos(): List&lt;Asiento&gt;
+--
+Responsibilities
+-- Representar una sala dentro de un cine
+-- Agrupar asientos y tecnología</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1113</x><y>336</y><w>161</w><h>133</h></coordinates><panel_attributes>cinemax::Asiento
+--
+- numeroAsiento: int
+- numeroFila: int
+- tipo: String
+--
++ getNumeroAsiento(): int
++ getNumeroFila(): int
++ getTipo(): TipoAsiento
+--
+Responsibilities
+-- Representar un asiento específico
+-- Identificar fila, número y tipo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>84</x><y>343</y><w>182</w><h>147</h></coordinates><panel_attributes>cinemax::Funcion
+--
+- fechaHora: DateTime
+- pelicula: Pelicula
+- sala: Sala
+--
++ getFechaHora(): DateTime
++ getPelicula(): Pelicula
++ getSala(): Sala
++ getAsientosDisponibles(): List&lt;Asiento&gt;
++ estaDisponible(a: Asiento): boolean
+--
+Responsibilities
+-- Representar una proyección programada
+-- Consultar disponibilidad de asientos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>532</y><w>147</w><h>133</h></coordinates><panel_attributes>cinemax::Cliente
+--
+- idCliente: String
+- correo: String
+- contrasena: String
+- historialCompras: List&lt;Compra&gt;
+- cuentaLealtad: CuentaLealtad
+--
++ getIdCliente(): String
++ getCorreo(): String
++ validarContrasena(pass: String): boolean
++ getHistorialCompras(): List&lt;Compra&gt;
++ getCuentaLealtad(): CuentaLealtad
+--
+Responsibilities
+-- Usuario que compra boletas
+-- Mantener historial y lealtad</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>161</x><y>721</y><w>203</w><h>147</h></coordinates><panel_attributes>cinemax::Empleado
+--
+- correo: String
+- contrasena: String
+--
++ getCorreo(): String
++ validarContrasena(pass: String): boolean
++ configurarHorarios(): void
++ gestionarFunciones(): void
++ gestionarPeliculas(): void
++ gestionarSalas(): void
+--
+Responsibilities
+-- Usuario que administra el sistema
+-- Configurar horarios, funciones, películas y salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>966</x><y>700</y><w>189</w><h>168</h></coordinates><panel_attributes>cinemax::Compra
+--
+- monto: double
+- fechaTransaccion: DateTime
+- sillasCompradas: List&lt;Asiento&gt;
+- funcion: Funcion
+- medioPago: MedioPago
+--
++ getMonto(): double
++ getFechaTransaccion(): DateTime
++ getSillasCompradas(): List&lt;Asiento&gt;
++ getFuncion(): Funcion
++ getMedioPago(): MedioPago
+--
+Responsibilities
+-- Registrar una compra/pago de boletas
+-- Guardar monto, fecha y sillas compradas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1008</x><y>0</y><w>210</w><h>77</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+cinemax::MedioPago
+--
+--
++ getTipo(): String
+--
+Responsibilities
+-- Abstraer el medio de pago usado en una compra</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>896</x><y>154</y><w>147</w><h>63</h></coordinates><panel_attributes>cinemax::TarjetaCredito
+--
+--
++ getTipo(): String
+--
+Responsibilities
+-- Medio de pago: tarjeta de crédito</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1155</x><y>154</y><w>147</w><h>63</h></coordinates><panel_attributes>cinemax::TarjetaDebito
+--
+--
++ getTipo(): String
+--
+Responsibilities
+-- Medio de pago: tarjeta débito
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1365</x><y>154</y><w>175</w><h>126</h></coordinates><panel_attributes>cinemax::CuentaLealtad
+--
+- puntos: int
+- nivel: String
+--
++ getPuntos(): int
++ getNivel(): String
++ acumularPuntos(p: int): void
++ actualizarNivel(): void
+--
+Responsibilities
+-- Registrar puntos de lealtad del cliente
+-- Controlar nivel de membresía</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>301</x><y>196</y><w>168</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>220;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>308</x><y>77</y><w>126</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>160;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>203</x><y>203</y><w>266</w><h>315</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>360;430;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>595</x><y>392</y><w>203</w><h>35</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+contiene &gt;</panel_attributes><additional_attributes>10;20;77;25;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>392</y><w>175</w><h>35</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+tiene &gt;</panel_attributes><additional_attributes>10;20;117;25;230;20</additional_attributes></element></diagram>
